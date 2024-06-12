@@ -89,7 +89,7 @@ contract P1FinalSettlement is
        ensures IERC20(_TOKEN_).balanceOf(msg.sender) - \old(IERC20(_TOKEN_).balanceOf(msg.sender)) <= IERC20(_TOKEN_).balanceOf(address(this));
        ensures _FINAL_SETTLEMENT_PRICE_ == \old(_FINAL_SETTLEMENT_PRICE_);
        ensures _MIN_COLLATERAL_ == \old(_MIN_COLLATERAL_);
-       ensure _GLOBAL_INDEX_ == \old(_GLOBAL_INDEX_);
+       ensures _GLOBAL_INDEX_ == \old(_GLOBAL_INDEX_);
     */ 
     function withdrawFinalSettlement()
         external
